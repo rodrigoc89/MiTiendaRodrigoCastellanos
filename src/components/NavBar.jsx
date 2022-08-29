@@ -1,4 +1,5 @@
 import React from 'react';
+import Carrito from './Carrito';
 function NavBar() {
     return ( 
         <header>
@@ -8,8 +9,9 @@ function NavBar() {
           <div className="headerSections">
             <a href="#">Inicio</a>
             <a href="#">Contacto</a>
-            <a> <i className="fa-solid fa-cart-shopping"> </i></a>
+            <Carrito/>
             <a> <i className="fa-solid fa-user"></i></a>
+
           </div>
         </div>
       </header>
