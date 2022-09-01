@@ -1,5 +1,6 @@
 import React from 'react';
-import Carrito from './Carrito';
+import CartWidget from './CartWidget';
+import ItemListContainer from './ItemListContainer';
 function NavBar() {
     return ( 
         <header>
@@ -9,7 +10,7 @@ function NavBar() {
           <div className="headerSections">
             <a href="#">Inicio</a>
             <a href="#">Contacto</a>
-            <Carrito/>
+            <CartWidget/>
             <a> <i className="fa-solid fa-user"></i></a>
 
           </div>
@@ -19,4 +20,10 @@ function NavBar() {
     )
 }
 
+function ItemListContainer() {
+    return (
+        <ItemListContainer />
+    )
+
+}
 export default NavBar;

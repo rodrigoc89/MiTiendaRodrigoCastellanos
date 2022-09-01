@@ -1,8 +1,8 @@
 import React from 'react';
-function Carrito(){
+function CartWidget(){
     return(
 
         <a> <i className="fa-solid fa-cart-shopping"> </i></a>
     )
 }
-export default Carrito
+export default CartWidget
