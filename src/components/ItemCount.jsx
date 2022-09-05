@@ -27,7 +27,7 @@ function ItemCount({stock, initial}){
     return (
         <>
         <button onClick={restar}><i className="fa-solid fa-minus"></i></button>
-        <p id='count'>{count}</p>
+        <p>{count}</p>
         <button onClick={sumar}><i className="fa-solid fa-plus"></i></button>
         <button onClick={onAdd}>Comprar</button>
         </>

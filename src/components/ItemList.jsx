@@ -9,6 +9,7 @@ function ItemList({data}){
             stock={item.stock}
             title={item.title}
             img={item.img}
+            precio={item.precio}
             />
         ))
     )

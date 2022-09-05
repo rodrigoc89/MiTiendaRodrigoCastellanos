@@ -138,13 +138,11 @@ img {
 
 
 /* button */
-#count{
-  
-}
+
 
 .itemCount {
   font-size: 13px;
- line-height: 5px;
+ line-height: 10px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
