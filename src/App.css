@@ -2,12 +2,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family:sans-serif
+  font-family: sans-serif
 }
 
 a {
   text-decoration: none;
 }
+
 ul {
   list-style: none;
 }
@@ -41,7 +42,7 @@ header {
   text-decoration: none;
 }
 
-#carro{
+#carro {
   font-size: 25px;
   color: white;
   margin-right: 3px;
@@ -52,7 +53,7 @@ header {
   color: white;
   font-weight: 500;
   font-size: 1.4rem;
-  
+
 
 }
 
@@ -79,7 +80,7 @@ header {
   text-decoration: none;
 }
 
-/* / MENU HAMBURGUESA */ 
+/* / MENU HAMBURGUESA */
 
 .container .burger-btn {
   display: none;
@@ -88,11 +89,12 @@ header {
   color: white;
 }
 
-.item{
-  color:white;
+.item {
+  color: white;
   font-size: 20px;
 }
-.props{
+
+.props {
   text-align: center;
   margin-top: 50px;
   font-size: 50px;
@@ -101,25 +103,34 @@ header {
 
 
 /* CONTAINER */
-
-
-.container h1{
- text-align: center;
-  display: block;
-  
+#container {
+  margin-top: 100px;
 }
 
-.card {
-width: 500px;
-margin-top: 100px;
-
+.productCatalog {
+  display: flex;
+  justify-content: center;
+  margin: auto;
 }
+
+.gridCatalog {
+  display: grid;
+  grid-template-rows: repeat(auto, 1fr);
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+
+
+/* .card {
+margin-top: 100px,
+} */
 
 img {
   max-width: 100%;
 }
 
-.title{
+.title {
   color: blue;
   margin-top: 150px;
   margin-bottom: 50px;
@@ -127,16 +138,25 @@ img {
 
 
 /* button */
+#count{
+  
+}
+
 .itemCount {
-  font-size: 20px;
- display: flex;
- flex-direction: row;
- justify-content: space-between;
+  font-size: 13px;
+ line-height: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 
 }
+
 button {
   border: none;
+  border-style: groove;
+
 }
+
 /* @MEDIA */
 @media (max-width: 1080px) {
   .nav {
@@ -148,12 +168,15 @@ button {
   .nav {
     padding: 11px;
   }
+
   .headerSections a {
     display: none;
   }
+
   .container .burger-btn {
     display: block;
   }
+
   .logo {
     font-size: 27px;
   }

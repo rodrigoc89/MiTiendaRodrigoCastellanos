@@ -1,45 +1,32 @@
-import React from 'react';
-import ItemCount from './ItemCount';
+import React, { useState, useEffect } from 'react';
+import customFetch from '../Utils/CustomFechts';
+import dataFromBD from '../Utils/Data';
+import ItemList from './ItemList';
 
-function ItemListContainer() {
-  return (
-    <>
-      <div className="container">
-        <div className="row">
-          <div className="col-6">
-            <div className='card'>
-              <img src="https://i.postimg.cc/pXFTDTfw/kja.webp" alt="asd" />
-              <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <div class="itemCount">
-                  <ItemCount
-                    stock={5} initial={1}
-                  />
+
+
+const ItemListContainer = () => {
+    const [data, setData] = useState([]);
+    useEffect(() => {
+        customFetch(2000, dataFromBD)
+            .then((datos) => setData(dataFromBD))
+            .catch((err) => console.log(err));
+    }, []);
+    return (
+        <>
+        <div className="container" id='container'>
+            <div className="productCatalog">
+                <div className="gridCatalog">
+                  
+                        <ItemList data={data} />
+           
                 </div>
-              </div>
             </div>
-          </div>
-          <div className="col-6">
-            <div className='card'>
-              <img src="https://i.postimg.cc/pXFTDTfw/kja.webp" alt="asd" />
-              <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <div class="itemCount">
-                  <ItemCount
-                    stock={5} initial={1}
-                  />
-                </div>
-              </div>
-
             </div>
-          </div>
-        </div>
-      </div>
+        </>
+    )
+};
 
-    </>
 
-  )
-
-}
 
 export default ItemListContainer;
